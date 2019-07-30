@@ -30,7 +30,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 1,
+   "execution_count": 17,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -63,7 +63,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 2,
+   "execution_count": 18,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -90,7 +90,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 3,
+   "execution_count": 4,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -109,7 +109,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 4,
+   "execution_count": 13,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -162,7 +162,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 5,
+   "execution_count": 6,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -184,7 +184,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 6,
+   "execution_count": 7,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -195,7 +195,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 7,
+   "execution_count": 8,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -228,7 +228,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 8,
+   "execution_count": 28,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -251,7 +251,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 9,
+   "execution_count": 29,
    "metadata": {},
    "outputs": [
     {
@@ -868,7 +868,7 @@
        "</body></html>"
       ]
      },
-     "execution_count": 9,
+     "execution_count": 29,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -879,118 +879,11 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 21,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "<a class=\"text-dark fa fa-download float-right\" download=\"\" href=\"/archives/download/774729154\" title=\"Download audio\"></a>"
-      ]
-     },
-     "execution_count": 21,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "archive_page_soup.find_all('a', \n",
-    "                           {'href':re.compile('/download/')\n",
-    "                           })[0]"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 16,
+   "execution_count": null,
    "metadata": {},
    "outputs": [],
    "source": [
-    "current_first_id = archive_page_soup.find_all('a', \n",
-    "                                              {'href':re.compile('/download/')\n",
-    "                                              })[0].attrs['href'].split('/')[-1]"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 20,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "'774729154'"
-      ]
-     },
-     "execution_count": 20,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "current_first_id"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 36,
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "774734412\n"
-     ]
-    }
-   ],
-   "source": [
-    "# Instantiate a browser\n",
-    "browser = webdriver.Chrome('../assets/chromedriver')\n",
-    "\n",
-    "# Open the feed archive page\n",
-    "browser.get('https://m.broadcastify.com/archives/feed/' + TEST_FEED_ID)\n",
-    "\n",
-    "## Wait for page to render\n",
-    "element = WebDriverWait(browser, 10).until(\n",
-    "        EC.presence_of_element_located((By.CLASS_NAME, \"cursor-link\")))\n",
-    "\n",
-    "element = browser.find_element_by_xpath(f\"//a[@class='text-dark fa fa-download float-right'\"\n",
-    "                                        f\"and starts-with(@href, '/archives/download')]\")\n",
-    "\n",
-    "print(element.get_attribute('href').split('/')[-1])\n",
-    "\n",
-    "#//a[@class='text-dark fa fa-download float-right' and starts-with(@href, '/archives/download')]\n",
-    "#//a[@class='bf' and starts-with(@href, '/book/')]\n",
-    "\n",
-    "\n",
-    "# //Element[@attribute1=\"abc\" and @attribute2=\"xyz\" and text()=\"Data\"]\n",
-    "#'//a[@href.contains(text(), '774729154')]'\n",
-    "#//a[text()='text_i_want_to_find']/@href\n",
-    "# Capture page content as a BSoup\n",
-    "# archive_page_soup = BeautifulSoup(browser.page_source, 'lxml')\n",
-    "\n",
-    "# Quit the browser\n",
-    "# browser.quit()"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 35,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "'774734412'"
-      ]
-     },
-     "execution_count": 35,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "element.get_attribute('href').split('/')[-1]"
+    "archive_page_soup"
    ]
   },
   {
