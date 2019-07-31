@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<counters>
+		
+		<counter id="33">
+			<name>110 Trail</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.885315</latitude>
+			<longitude>-77.065022</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="30">
+			<name>14th Street Bridge</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.874260</latitude>
+			<longitude>-77.044610</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="43">
+			<name>15th Street NW</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.907470</latitude>
+			<longitude>-77.034610</longitude>
+            <region>
+            	<name>DC</name>
+                <id>3</id>
+            </region> 
+		</counter>
+		
+		<counter id="32">
+			<name>Arlington Mill Trail</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.845610</latitude>
+			<longitude>-77.096046</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="24">
+			<name>Ballston Connector</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.882950</latitude>
+			<longitude>-77.121235</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="23">
+			<name>Bluemont Connector</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.880476</latitude>
+			<longitude>-77.119311</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="56">
+			<name>BWP Counter</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.933140</latitude>
+			<longitude>-76.938320</longitude>
+            <region>
+            	<name>Prince George's County</name>
+                <id>5</id>
+            </region> 
+		</counter>
+		
+		<counter id="47">
+			<name>Capital Crescent Trail #1</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.979500</latitude>
+			<longitude>-77.096760</longitude>
+            <region>
+            	<name>Montgomery County</name>
+                <id>4</id>
+            </region> 
+		</counter>
+		
+		<counter id="48">
+			<name>Capital Crescent Trail #2</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.943070</latitude>
+			<longitude>-77.115660</longitude>
+            <region>
+            	<name>Montgomery County</name>
+                <id>4</id>
+            </region> 
+		</counter>
+		
+		<counter id="10">
+			<name>CC Connector</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.857702</latitude>
+			<longitude>-77.047373</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="20">
+			<name>Clarendon EB bike lane</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.888780</latitude>
+			<longitude>-77.090421</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="35">
+			<name>Commonwealth Bike Lanes</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.831730</latitude>
+			<longitude>-77.059280</longitude>
+            <region>
+            	<name>Alexandria</name>
+                <id>2</id>
+            </region> 
+		</counter>
+		
+		<counter id="57">
+			<name>Cottage City Counter</name>
+			<description>Anacostia River Trail</description>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.939700</latitude>
+			<longitude>-76.944710</longitude>
+            <region>
+            	<name>Prince George's County</name>
+                <id>5</id>
+            </region> 
+		</counter>
+		
+		<counter id="18">
+			<name>Crystal NB bike lane</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.857315</latitude>
+			<longitude>-77.049152</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="17">
+			<name>Crystal SB bike lane</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.853969</latitude>
+			<longitude>-77.049544</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="3">
+			<name>Custis Bon Air Park</name>
+			<description/>
+			<trail_id>2</trail_id>
+			<trail_name>Custis</trail_name>
+			<latitude>38.879199</latitude>
+			<longitude>-77.138420</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="4">
+			<name>Custis Rosslyn</name>
+			<description/>
+			<trail_id>2</trail_id>
+			<trail_name>Custis</trail_name>
+			<latitude>38.897191</latitude>
+			<longitude>-77.083031</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="38">
+			<name>Eisenhower Trail</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.802950</latitude>
+			<longitude>-77.088350</longitude>
+            <region>
+            	<name>Alexandria</name>
+                <id>2</id>
+            </region> 
+		</counter>
+		
+		<counter id="44">
+			<name>Eye Street SW</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.879260</latitude>
+			<longitude>-77.015580</longitude>
+            <region>
+            	<name>DC</name>
+                <id>3</id>
+            </region> 
+		</counter>
+		
+		<counter id="14">
+			<name>Fairfax EB bike lane</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.882767</latitude>
+			<longitude>-77.104615</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="13">
+			<name>Fairfax WB Bike Lane</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.883229</latitude>
+			<longitude>-77.103789</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="5">
+			<name>Four Mile Run (piezo)</name>
+			<description/>
+			<trail_id>3</trail_id>
+			<trail_name>Four Mile Run</trail_name>
+			<latitude>38.843262</latitude>
+			<longitude>-77.080860</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="6">
+			<name>Four Mile Run (pyro)</name>
+			<description/>
+			<trail_id>3</trail_id>
+			<trail_name>Four Mile Run</trail_name>
+			<latitude>38.843353</latitude>
+			<longitude>-77.080581</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="42">
+			<name>Four Mile Trail</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.840070</latitude>
+			<longitude>-77.053290</longitude>
+            <region>
+            	<name>Alexandria</name>
+                <id>2</id>
+            </region> 
+		</counter>
+		
+		<counter id="37">
+			<name>Holmes Run Trail</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.817830</latitude>
+			<longitude>-77.123570</longitude>
+            <region>
+            	<name>Alexandria</name>
+                <id>2</id>
+            </region> 
+		</counter>
+		
+		<counter id="27">
+			<name>Joyce St NB</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.867264</latitude>
+			<longitude>-77.062829</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="26">
+			<name>Joyce St SB</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.867271</latitude>
+			<longitude>-77.063054</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="8">
+			<name>Key Bridge East</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.900468</latitude>
+			<longitude>-77.070656</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="7">
+			<name>Key Bridge West</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.900539</latitude>
+			<longitude>-77.070900</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="51">
+			<name>Matthew Henson Trail 1</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>39.081660</latitude>
+			<longitude>-77.047360</longitude>
+            <region>
+            	<name>Montgomery County</name>
+                <id>4</id>
+            </region> 
+		</counter>
+		
+		<counter id="52">
+			<name>Matthew Henson Trail 2</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>39.058320</latitude>
+			<longitude>-77.091600</longitude>
+            <region>
+            	<name>Montgomery County</name>
+                <id>4</id>
+            </region> 
+		</counter>
+		
+		<counter id="45">
+			<name>Metropolitan Branch Trail North</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.923040</latitude>
+			<longitude>-76.995700</longitude>
+            <region>
+            	<name>DC</name>
+                <id>3</id>
+            </region> 
+		</counter>
+		
+		<counter id="22">
+			<name>Military NB bike lane</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.905509</latitude>
+			<longitude>-77.109349</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="21">
+			<name>Military SB bike lane</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.905732</latitude>
+			<longitude>-77.109698</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="36">
+			<name>Mount Vernon Trail #1</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.839570</latitude>
+			<longitude>-77.046630</longitude>
+            <region>
+            	<name>Alexandria</name>
+                <id>2</id>
+            </region> 
+		</counter>
+		
+		<counter id="34">
+			<name>Mount Vernon Trail #2</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.827310</latitude>
+			<longitude>-77.042830</longitude>
+            <region>
+            	<name>Alexandria</name>
+                <id>2</id>
+            </region> 
+		</counter>
+		
+		<counter id="41">
+			<name>Mount Vernon Trail #3</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.790290</latitude>
+			<longitude>-77.050940</longitude>
+            <region>
+            	<name>Alexandria</name>
+                <id>2</id>
+            </region> 
+		</counter>
+		
+		<counter id="9">
+			<name>MVT Airport South</name>
+			<description/>
+			<trail_id>3</trail_id>
+			<trail_name>Four Mile Run</trail_name>
+			<latitude>38.844471</latitude>
+			<longitude>-77.048923</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="39">
+			<name>Potomac Yard Trail #1</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.829850</latitude>
+			<longitude>-77.047850</longitude>
+            <region>
+            	<name>Alexandria</name>
+                <id>2</id>
+            </region> 
+		</counter>
+		
+		<counter id="16">
+			<name>Quincy NB bike lane</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.885457</latitude>
+			<longitude>-77.108055</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="15">
+			<name>Quincy SB bike lane</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.884877</latitude>
+			<longitude>-77.108075</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="54">
+			<name>Rock Creek Trail 1</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>39.016130</latitude>
+			<longitude>-77.094200</longitude>
+            <region>
+            	<name>Montgomery County</name>
+                <id>4</id>
+            </region> 
+		</counter>
+		
+		<counter id="55">
+			<name>Rock Creek Trail 2</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>39.090260</latitude>
+			<longitude>-77.113820</longitude>
+            <region>
+            	<name>Montgomery County</name>
+                <id>4</id>
+            </region> 
+		</counter>
+		
+		<counter id="31">
+			<name>Roosevelt Bridge</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.893822</latitude>
+			<longitude>-77.065737</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="28">
+			<name>Rosslyn Bikeometer</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.899080</latitude>
+			<longitude>-77.070980</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="11">
+			<name>TR Island Bridge</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.897960</latitude>
+			<longitude>-77.067721</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="2">
+			<name>W&amp;OD Bon Air Park</name>
+			<description/>
+			<trail_id>1</trail_id>
+			<trail_name>W&amp;OD</trail_name>
+			<latitude>38.878949</latitude>
+			<longitude>-77.138546</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="25">
+			<name>W&amp;OD Bon Air West</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.879330</latitude>
+			<longitude>-77.139250</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="12">
+			<name>W&amp;OD Columbia Pike</name>
+			<description/>
+			<trail_id>1</trail_id>
+			<trail_name>W&amp;OD</trail_name>
+			<latitude>38.857085</latitude>
+			<longitude>-77.110789</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="1">
+			<name>W&amp;OD East Falls Church</name>
+			<description/>
+			<trail_id>1</trail_id>
+			<trail_name>W&amp;OD</trail_name>
+			<latitude>38.887806</latitude>
+			<longitude>-77.163889</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+		<counter id="19">
+			<name>Wilson WB bike lane</name>
+			<description/>
+			<trail_id/>
+			<trail_name/>
+			<latitude>38.889855</latitude>
+			<longitude>-77.090175</longitude>
+            <region>
+            	<name>Arlington</name>
+                <id>1</id>
+            </region> 
+		</counter>
+		
+	</counters>
