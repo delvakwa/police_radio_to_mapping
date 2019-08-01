@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Library def
-
-# In[ ]:
+# In[1]:
 
 
 import collections
@@ -23,26 +21,27 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
 
 
-# In[ ]:
+# In[2]:
 
 
 # Throughout, "att" is short for "archiveTimes table", which contains archive 
 # entry info for the date selected in the calendar
 
 
-# In[ ]:
+# In[3]:
 
 
 # Constants
 _FEED_URL_STEM = 'https://www.broadcastify.com/listen/feed/'
-ARCHIVE_FEED_STEM = 'https://m.broadcastify.com/archives/feed/'
-ARCHIVE_DOWNLOAD_STEM = 'https://m.broadcastify.com/archives/id/'
-LOGIN_URL = 'https://www.broadcastify.com/login/'
-FIRST_URI_IN_ATT_XPATH = "//a[contains(@href,'/archives/download/')]"
+_ARCHIVE_FEED_STEM = 'https://m.broadcastify.com/archives/feed/'
+_ARCHIVE_DOWNLOAD_STEM = 'https://m.broadcastify.com/archives/id/'
+_LOGIN_URL = 'https://www.broadcastify.com/login/'
+_FIRST_URI_IN_ATT_XPATH = "//a[contains(@href,'/archives/download/')]"
 
-MONTHS = ['','January', 'February', 'March',
+_MONTHS = ['','January', 'February', 'March',
       'April', 'May', 'June',
       'July', 'August', 'September',
       'October', 'November', 'December']
@@ -64,14 +63,13 @@ ArchiveEntry = collections.namedtuple('ArchiveEntry',
         The URL of the corresponding mp3 file
     """;
 
-FILE_REQUEST_WAIT = 5 # seconds
-PAGE_REQUEST_WAIT = 2 # seconds
-# WEBDRIVER_PATH = '../assets/chromedriver' # for Chrome
-WEBDRIVER_PATH = '../assets/phantomjs-2.1.1-macosx' # for Phantom JS
-MP3_OUT_PATH = '../audio_data/audio_files/mp3_files/'
+_FILE_REQUEST_WAIT = 5 # seconds
+_PAGE_REQUEST_WAIT = 2 # seconds
+_WEBDRIVER_PATH = '../assets/chromedriver' # for Chrome
+_MP3_OUT_PATH = '../audio_data/audio_files/mp3_files/'
 
 
-# In[ ]:
+# In[4]:
 
 
 class RequestThrottle:
@@ -81,33 +79,33 @@ class RequestThrottle:
         
     def throttle(self, type='page'):
         if type == 'page':
-            while not timer() - self.last_page_req >= PAGE_REQUEST_WAIT:
+            while not timer() - self.last_page_req >= _PAGE_REQUEST_WAIT:
                 pass
             self.last_page_req = timer()
         else:
-            while not timer() - self.last_file_req >= FILE_REQUEST_WAIT:
+            while not timer() - self.last_file_req >= _FILE_REQUEST_WAIT:
                 pass
             self.last_file_req = timer()        
 
 
-# In[ ]:
+# In[5]:
 
 
-class NoActiveBrowser(Exception):
+class NavigatorException(Exception):
     pass
 
 
-# In[ ]:
+# In[17]:
 
 
 class BroadcastifyArchive:
     def __init__(self, feed_id, username=None, password=None, verbose=1):
         self.feed_id = feed_id
         self.feed_url = _FEED_URL_STEM + feed_id
-        self.archive_url = ARCHIVE_FEED_STEM + feed_id
+        self.archive_url = _ARCHIVE_FEED_STEM + feed_id
         self.username = username
         self.password = password
-        self.entries = sample_archive_entries #[] # list of ArchiveEntry objects
+        self.entries = [] # list of ArchiveEntry objects
         self.earliest_date = None 
         self.latest_date = None
         
@@ -128,7 +126,7 @@ class BroadcastifyArchive:
         self.earliest_date = None
         self.latest_date = None
         self.feed_url = _FEED_URL_STEM + value
-        self.archive_url = ARCHIVE_FEED_STEM + value
+        self.archive_url = _ARCHIVE_FEED_STEM + value
         self._an = None
 
     @property
@@ -162,10 +160,10 @@ class BroadcastifyArchive:
         except (TypeError):
             raise TypeError("The `days_back` parameter needs an integer between 0 and 180.")
         
-        if self._verbose: print('Starting the ArchiveNavigator...')
+        if self._verbose: print('Starting the _ArchiveNavigator...')
 
-        # Instantiate the ArchiveNavigator
-        self.an = ArchiveNavigator(self.archive_url, self._verbose)
+        # Instantiate the _ArchiveNavigator
+        self.an = _ArchiveNavigator(self.archive_url, self._verbose)
         
         # Add the current (zero-th) day's archiveTimes table (ATT) entries 
         # (file_uri & file_end_date_time)
@@ -192,29 +190,34 @@ class BroadcastifyArchive:
         # Iterate through att entries to
         ##  - Get the mp3 URL
         ##  - Build an ArchiveEntry, and append to the list
-        ## Instantiate the DownloadNavigator
-        dn = DownloadNavigator(login=True, _verbose=self._verbose)
+        ## Instantiate the _DownloadNavigator
+        dn = _DownloadNavigator(login=True,
+                                username=self.username,
+                                password=self._password,
+                                verbose=self._verbose)
         counter = 0
         
         ## Loop & build ArchiveEntry list
         for uri, end_time in all_att_entries:
             counter += 1
             if self._verbose: print(f'Building ArchiveEntry list: {counter} of {len(all_att_entries)}')
-            clear_output(wait=True)
+#             clear_output(wait=True)
+            pdb.set_trace()
+            mp3_soup = dn.get_download_soup(uri)
+            mp3_path = self.__parse_mp3_path(mp3_soup)
             self.entries.append(ArchiveEntry(self.feed_id,
                                              uri,
                                              end_time,
-                                             self.__parse_mp3_path(
-                                             dn.get_download_soup(uri))))
+                                             mp3_path))
 
         if self._verbose:
             print(f'Archive build complete.')
             print(self)
             
-    def download(self, start=None, end=None, filepath=MP3_OUT_PATH):
+    def download(self, start=None, end=None, filepath=_MP3_OUT_PATH):
         entries = self.entries
         entries_to_pass = []
-        dn = DownloadNavigator(login=False)
+        dn = _DownloadNavigator(login=False)
         
         if not start: start = datetime(1,1,1,0,0)
         if not end: end = datetime(9999,12,31,0,0)
@@ -224,7 +227,7 @@ class BroadcastifyArchive:
                            entry.file_end_datetime >= start and
                            entry.file_end_datetime <= end]
         
-        # Pass them as a list to a DownloadNavigator.get_archive_mp3s
+        # Pass them as a list to a _DownloadNavigator.get_archive_mp3s
         dn.get_archive_mp3s(entries_to_pass, filepath)
     
     def __parse_att(self, att_soup):
@@ -240,7 +243,7 @@ class BroadcastifyArchive:
         ----------
         att_soup : bs4.BeautifulSoup
             A BeautifulSoup object containing the ATT source code, obtained
-            from ArchiveNavigator.att_soup
+            from _ArchiveNavigator.att_soup
 
 
         """
@@ -284,11 +287,12 @@ class BroadcastifyArchive:
                f')')
 
 
-# In[ ]:
+# In[18]:
 
 
-class ArchiveNavigator:
+class _ArchiveNavigator:
     def __init__(self, url, verbose):
+        
         self.url = url
         self.calendar_soup = None
         self.att_soup = None
@@ -365,7 +369,7 @@ class ArchiveNavigator:
 
         # Wait for page to render
         element = WebDriverWait(self.browser, 10).until_not(
-                    EC.text_to_be_present_in_element((By.XPATH, FIRST_URI_IN_ATT_XPATH), 
+                    EC.text_to_be_present_in_element((By.XPATH, _FIRST_URI_IN_ATT_XPATH), 
                                                       self.current_first_uri))
 
         self.current_first_uri = self.__get_current_first_uri()
@@ -413,7 +417,7 @@ class ArchiveNavigator:
                                               {'class': 'datepicker-switch'}
                                               ).text.split(' ')
         
-        displayed_month = MONTHS.index(month)
+        displayed_month = _MONTHS.index(month)
         displayed_year = int(year)
         
         # Parse the various calendar attributes
@@ -446,12 +450,17 @@ class ArchiveNavigator:
 
     def __get_current_first_uri(self):
         return self.browser.find_element_by_xpath(
-                    FIRST_URI_IN_ATT_XPATH
+                    _FIRST_URI_IN_ATT_XPATH
                     ).get_attribute('href').split('/')[-1]
         
     def open_browser(self):
         if self.verbose: print('Opening browser...')
-        self.browser = webdriver.Chrome(WEBDRIVER_PATH)
+
+        # Make Chrome invisible, comment if you want to see it in action...
+        options = Options()
+        options.headless = True
+        # Launch Chrome
+        self.browser = webdriver.Chrome(_WEBDRIVER_PATH, chrome_options=options)
 
     def close_browser(self):
         if self.verbose: print('Closing browser...')
@@ -459,20 +468,20 @@ class ArchiveNavigator:
 
     def __check_browser(self):
         if not self.browser:
-            raise NoActiveBrowser("Please open a browser. And remember to close it when you're done.")
+            raise NavigatorException("Please open a browser. And remember to close it when you're done.")
             
     def __repr__(self):
-        return(f'ArchiveNavigator(URL: {self.url}, '
+        return(f'_ArchiveNavigator(URL: {self.url}, '
                f'Currently Displayed: {str(self.active_date)}, '
                f'Max Day: {str(self.archive_max_date)}, '
                f'Min Day: {str(self.archive_min_date)}, ')
 
 
-# In[ ]:
+# In[19]:
 
 
-class DownloadNavigator():
-    def __init__(self, login=False, verbose=False):
+class _DownloadNavigator():
+    def __init__(self, login=False, username=None, password=None, verbose=False):
         self.download_page_soup = None
         self.current_archive_id = None
         self.verbose = verbose
@@ -482,8 +491,8 @@ class DownloadNavigator():
         
         # Set post parameters
         login_data = {
-            'username': USERNAME,
-            'password': PASSWORD,
+            'username': username,
+            'password': password,
             'action': 'auth',
             'redirect': '/'
         }
@@ -495,8 +504,11 @@ class DownloadNavigator():
         }
         
         if l:
+            if not username or not password:
+                raise NavigatorException("If login=True, login credentials must be supplied.")
+                
             t.throttle()
-            r = s.post(LOGIN_URL, data=login_data, headers=headers)
+            r = s.post(_LOGIN_URL, data=login_data, headers=headers)
 
             if r.status_code != 200:
                 raise ConnectionError(f'Problem connecting: {r.status_code}')
@@ -507,7 +519,7 @@ class DownloadNavigator():
         t = self.throttle
         
         t.throttle()
-        r = s.get('https://m.broadcastify.com/archives/id/' + archive_id)
+        r = s.get(_ARCHIVE_DOWNLOAD_STEM + archive_id)
         if r.status_code != 200:
             raise ConnectionError(f'Problem connecting: {r.status_code}')
                                   
@@ -531,7 +543,7 @@ class DownloadNavigator():
             if self.verbose:
                 print(f'\tfrom {file_url}')
                 print(f'\tto {out_file_name}')
-            clear_output(wait=True)
+#             clear_output(wait=True)
 
             self.throttle.throttle('file')
             self.__fetch_mp3([out_file_name, file_url])
@@ -566,5 +578,5 @@ class DownloadNavigator():
                          str(hour).zfill(2) + str(minute).zfill(2)])
     
     def __repr__(self):
-        return(f'DownloadNavigator(Current Archive: {self.current_archive_id})')
+        return(f'_DownloadNavigator(Current Archive: {self.current_archive_id})')
 
