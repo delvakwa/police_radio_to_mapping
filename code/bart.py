@@ -73,7 +73,9 @@ _MONTHS = ['','January', 'February', 'March',
       'July', 'August', 'September',
       'October', 'November', 'December']
 
-# Library-level variables
+#-----------------------------------------------------------------------------
+# Variables
+#-----------------------------------------------------------------------------
 ArchiveEntry = collections.namedtuple(
                                 'ArchiveEntry',
                                 'feed_id file_uri file_end_datetime mp3_url'
