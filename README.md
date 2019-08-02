@@ -1,7 +1,7 @@
 # Mapping Emergency Dispatch Transmissions
 
-**General Assembly Data Science Immersive**
-Project 5: Client Project
+**General Assembly Data Science Immersive**<br>
+Project 5: Client Project<br>
 DSI-ATL-8: Anthony Chapman, Carol Chiu, Kwamae Delva, and Joseph Hopkins
 
 ## Executive Summary
@@ -14,14 +14,14 @@ _**Problem 10:** Using live police radio reports for real time identification of
 
 ### Background
 
-Disaster responders need information about where resources can be best deployed to meet urgent or large-scale needs. Emergency radio transmissions are a rich source of this information because
-- They’re real time: broadcasts are coming over the airwaves literally RIGHT NOW
-- They contain rich location information: by their nature, dispatches involve telling the responder where the emergency is occurring
-- They're real emergencies: experienced dispatchers have vetted inbound calls for real need for services and triaged them
+During a disaster, auxiliary responders (such as those under the direction of FEMA) need information about where resources can be best deployed to meet urgent or large-scale needs. Emergency radio transmissions are a rich source of this information because
+- **They’re real time:** broadcasts are coming over the airwaves literally RIGHT NOW
+- **They contain rich location information:** by their nature, dispatches involve telling the responder where the emergency is occurring
+- **They're real emergencies:** experienced dispatchers have vetted inbound calls for real need for services and triaged them
 
 In aggregate, during a time of emergency, visualizing where on the map first responders are being dispatches to can give those leading auxiliary response efforts valuable information about where they should be sending their assistance.
 
-#### Note to Future DSI Cohorts:
+**_Note to Future DSI Cohorts:_**
 
 >A primary contribution of our work is the [Broadcastify Archive Toolkit library] **!!INSERT LINK!!**. If you've selected this project, consider leveraging `BArT` to build a corpus of radio dispatch audio data on which to train your model.
 
@@ -46,8 +46,7 @@ As of this writing, some enhancements we'd like to see on BArT include
 - Parallelize mp3 filename acquisition & mp3 download
 - Register BArT with [pyPI](https://pypi.org/)
 - Create a setup script (pip install bart) to gracefully handle dependencies
-Built-in pickler/de-pickler?
-
+- Built-in pickler/de-pickler?
 
 #### Parse & Segment Audio
 
@@ -80,5 +79,3 @@ Built-in pickler/de-pickler?
 ##### _What We Built_
 
 ##### _Next Steps_
-
-## Conclusion
