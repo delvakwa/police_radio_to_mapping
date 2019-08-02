@@ -23,11 +23,13 @@ In aggregate, during a time of emergency, visualizing where on the map first res
 
 **_Note to Future DSI Cohorts:_**
 
->A primary contribution of our work is the [Broadcastify Archive Toolkit library] **!!INSERT LINK!!**. If you've selected this project, consider leveraging `BArT` to build a corpus of radio dispatch audio data on which to train your model.
+>A primary contribution of our work is the [Broadcastify Archive Toolkit library] **!!INSERT LINK!!**. If you've selected this project, consider leveraging `BArT` to build a corpus of radio dispatch audio data on which to train your model. We're also indebted to the [DSI-NY-7 Campfire Radio-to-Location](https://github.com/mchbmn/radio-to-location) and [DSI-CHI-7 Project Red Siren](https://github.com/project-red-siren-dsi-chi-cc7/deliverables), so...paying it forward.
+
+
 
 ### Framework
 
-We conceived a five-step process to represent the end-to-end journey of a radio transmission to a point potted on a map. That framework is **represented graphically nearby**. Below we'll briefly describe each step in the framework, what we built, and what next steps could be to advance the state of the art on a full-fledged dispatch-to-heatmap tool.
+ <img src="https://github.com/delvakwa/police-radio-to-mapping/blob/master/assets/screenshots/framework.png" align="right" width="200">We conceived a five-step process to represent the end-to-end journey of a radio transmission to a point potted on a map.That framework is **represented graphically nearby**. Below we'll briefly describe each step in the framework, what we built, and what next steps could be to advance the state of the art on a full-fledged dispatch-to-heatmap tool.
 
 #### Acquire Archive Audio
 
