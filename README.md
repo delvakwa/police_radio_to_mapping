@@ -23,7 +23,7 @@ In aggregate, during a time of emergency, visualizing where on the map first res
 
 **_Note to Future DSI Cohorts:_**
 
->A primary contribution of our work is the [Broadcastify Archive Toolkit library] **!!INSERT LINK!!**. If you've selected this project, consider leveraging `BArT` to build a corpus of radio dispatch audio data on which to train your model. We're also indebted to the [DSI-NY-7 Campfire Radio-to-Location](https://github.com/mchbmn/radio-to-location) and [DSI-CHI-7 Project Red Siren](https://github.com/project-red-siren-dsi-chi-cc7/deliverables), so...paying it forward.
+>A primary contribution of our work is the [Broadcastify Archive Toolkit library](https://github.com/ljhopkins2/BArT). If you've selected this project, consider leveraging `BArT` to build a corpus of radio dispatch audio data on which to train your model. We're also indebted to the [DSI-NY-7 Campfire Radio-to-Location](https://github.com/mchbmn/radio-to-location) and [DSI-CHI-7 Project Red Siren](https://github.com/project-red-siren-dsi-chi-cc7/deliverables), so...paying it forward.
 
 
 
@@ -38,7 +38,7 @@ We decided to focus on acquiring archived dispatch transmissions rather than on 
 
 ##### _What We Built_
 
-We used [Broadcastify](www.broadcastify.com) ("the world's largest source of Public Safety...live audio streams") as our source of archived dispatches. Because this process proved to be highly manual and time-consuming (in our own experience and that of previous projects we referenced), we developed the Broadcastify Archive Toolkit (BArT) to automate this process. We encourage future cohorts to leverage or iterate this tool to leapfrog the cumbersome manual download process. Documentation for BArT can be found at **!!INSERT LINK!!**.
+We used [Broadcastify](www.broadcastify.com) ("the world's largest source of Public Safety...live audio streams") as our source of archived dispatches. Because this process proved to be highly manual and time-consuming (in our own experience and that of previous projects we referenced), we developed the Broadcastify Archive Toolkit (BArT) to automate this process. We encourage future cohorts to leverage or iterate this tool to leapfrog the cumbersome manual download process. Documentation for BArT can be found at https://github.com/ljhopkins2/BArT.
 
 ##### _Next Steps_
 
