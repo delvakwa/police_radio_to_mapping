@@ -19,7 +19,7 @@ During a disaster, auxiliary responders (such as those under the direction of FE
 - **They contain rich location information:** by their nature, dispatches involve telling the responder where the emergency is occurring
 - **They're real emergencies:** experienced dispatchers have vetted inbound calls for real need for services and triaged them
 
-In aggregate, during a time of emergency, visualizing where on the map first responders are being dispatches to can give those leading auxiliary response efforts valuable information about where they should be sending their assistance.
+In aggregate, during a time of emergency, visualizing where on the map first responders are being dispatched to can give those leading auxiliary response efforts valuable information about where they should be sending their support.
 
 **_Note to Future DSI Cohorts:_**
 
