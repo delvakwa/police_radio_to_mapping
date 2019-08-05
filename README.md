@@ -66,7 +66,7 @@ Some enhancements we'd like to implement when parsing and segmenting audio inclu
 - Multiprocessing to speed up parsing and segmenting time
 - Using the Audacity API instead of Pydub since it appears to reduce processing time
 
-#### 04 Convert Text to Speech
+#### 03 Convert Text to Speech
 
 ##### _Description_
 
