@@ -31,7 +31,7 @@ In aggregate, during a time of emergency, visualizing where on the map first res
 
  <img src="https://github.com/delvakwa/police-radio-to-mapping/blob/master/assets/screenshots/framework.png" align="right" width="200">We conceived a five-step process to represent the end-to-end journey of a radio transmission to a point potted on a map.That framework is **represented graphically nearby**. Below we'll briefly describe each step in the framework, what we built, and what next steps could be to advance the state of the art on a full-fledged dispatch-to-heatmap tool.
 
-#### Acquire Archive Audio
+#### 01 Acquire Archive Audio
 
 ##### _Description_
 We decided to focus on acquiring archived dispatch transmissions rather than on handling a live-streaming feed. Not only did the technical lift for handling live-streamed data seem to exceed the available time, but – given the current state of the art – it was more important to build a corpus of audio data to train a model. We also hypothesized that we could use dispatch streams generally (as opposed to just when large-scale emergencies or disasters occurred), since our aim is for a tool that will be "turned on" after a disaster occurs, and not one to predict when radio transmission suggest a disaster _might_ be occurring.
@@ -50,7 +50,7 @@ As of this writing, some enhancements we'd like to see on BArT include
 - Create a setup script (pip install bart) to gracefully handle dependencies
 - Built-in pickler/de-pickler?
 
-#### Parse & Segment Audio
+#### 02 Parse & Segment Audio
 
 ##### _Description_
 
@@ -66,7 +66,7 @@ Some enhancements we'd like to implement when parsing and segmenting audio inclu
 - Multiprocessing to speed up parsing and segmenting time
 - Using the Audacity API instead of Pydub since it appears to reduce processing time
 
-#### Convert Text to Speech
+#### 04 Convert Text to Speech
 
 ##### _Description_
 
@@ -82,7 +82,7 @@ Some enhancements we'd like to implement when using a Speech to Text API include
 - Finding an API that produces better results
 - Training an API on location and radio data to improve performance
 
-#### Extract Geolocation Data
+#### 04 Extract Geolocation Data
 
 ##### _Description_
 
@@ -98,7 +98,7 @@ Some enhancements we'd like to implement when extracting Geolocation data includ
 - Using an API already trained on address data 
 - Referencing known addresses in the API and determining whether or not the address given is real or not
 
-#### Plot on Heatmap
+#### 05 Plot on Heatmap
 
 ##### _Description_
 
