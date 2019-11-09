@@ -23,7 +23,7 @@ In aggregate, during a time of emergency, visualizing where on the map first res
 
 **_Note to Future DSI Cohorts:_**
 
->A primary contribution of our work is the [Broadcastify Archive Toolkit](https://github.com/ljhopkins2/broadcastify-archtk) for python. If you've selected this project, consider leveraging the toolkit to build a corpus of radio dispatch audio data on which to train your model. We're also indebted to the [DSI-NY-7 Campfire Radio-to-Location](https://github.com/mchbmn/radio-to-location) and [DSI-CHI-7 Project Red Siren](https://github.com/project-red-siren-dsi-chi-cc7/deliverables), so...paying it forward.
+>A primary contribution of our work is the [Broadcastify Archive Toolkit](https://github.com/ljhopkins2/broadcastify-archtk) for python (`broadcastify-archtk`, formerly BArT). If you've selected this project, consider leveraging the toolkit to build a corpus of radio dispatch audio data on which to train your model. We're also indebted to the [DSI-NY-7 Campfire Radio-to-Location](https://github.com/mchbmn/radio-to-location) and [DSI-CHI-7 Project Red Siren](https://github.com/project-red-siren-dsi-chi-cc7/deliverables), so...paying it forward.
 
 
 
